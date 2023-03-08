@@ -45,7 +45,7 @@ button.addEventListener ('click',
 
         const nome = prompt('Nome del nuovo membro del team');
         const ruolo = prompt('Ruolo del nuovo membro del team');
-        const immagineProfilo = prompt('Allega il percorso per la tua immagine di profilo, aggiungendo il prefisso img/');
+        const immagineProfilo = prompt('Allega il percorso per la tua immagine di profilo');
 
         const nuovoMembro = {
             'nome': nome,
@@ -54,17 +54,22 @@ button.addEventListener ('click',
         };
         membri.push(nuovoMembro);
 
-        const last = membri[membri.length-1];
+        const last = membri[membri.length - 1];
         console.log(last);
-        const newMember = createNewCard(last);
-        main.append(nuovoMembro);
+
+        for (c = membri.length - 1; c <= membri.length - 1; c++) {
+
+            const newMember = createNewCard(membri[c]);
+            main.append(newMember);
+
+        }
     })
 
 
 
 
 for (i = 0; i < membri.length; i++) {
-    const listaMembri = createNewCard(membri);
+    const listaMembri = createNewCard(membri[i]);
     main.append(listaMembri);
 }
 
@@ -86,16 +91,16 @@ function createNewCard (membri) {
 
    const cardImg = document.createElement('img');
    cardImg.classList.add('img');
-   cardImg.src = (membri[i]['immagineProfilo']);
+   cardImg.src = (membri['immagineProfilo']);
    card.append(cardImg);
 
    const cardPerson = document.createElement('span');
-   cardPerson.innerHTML = (membri[i]['nome'])
+   cardPerson.innerHTML = (membri['nome'])
    card.append(cardPerson);
 
    const cardTitle = document.createElement('p');
    cardTitle.classList.add('job');
-   cardTitle.innerHTML = membri[i]['ruolo'];
+   cardTitle.innerHTML = membri['ruolo'];
    card.append(cardTitle);
 
    return card;
