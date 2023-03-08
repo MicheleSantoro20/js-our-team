@@ -54,14 +54,14 @@ function createNewCard (membri) {
    card.append(cardBorder);
    const cardImg = document.createElement('img');
    cardImg.classList.add('img');
-   cardImg.src = (membri[i+1]['immagineProfilo']);
+   cardImg.src = (membri[i]['immagineProfilo']);
    card.append(cardImg);
    const cardPerson = document.createElement('span');
-   cardPerson.innerHTML = (membri[i+1]['nome'])
+   cardPerson.innerHTML = (membri[i]['nome'])
    card.append(cardPerson);
    const cardTitle = document.createElement('p');
    cardTitle.classList.add('job');
-   cardTitle.innerHTML = membri[i+1]['ruolo'];
+   cardTitle.innerHTML = membri[i]['ruolo'];
    card.append(cardTitle);
 
    return card;
