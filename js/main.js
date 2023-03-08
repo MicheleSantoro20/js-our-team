@@ -29,9 +29,26 @@ const  membri = [
         'ruolo': 'Graphic Designer',
         'immagineProfilo': 'img/barbara-ramos-graphic-designer.jpg'
     }
-]
+];
+
+for (let key in membri) {
+    console.log(membri[key]);
+}
 
 const main = document.getElementById('main');
+
+const button = document.getElementById('button');
+
+button.addEventListener ('click', 
+    
+    function() {
+
+        
+
+    })
+
+
+
 
 for (i = 0; i < membri.length; i++) {
     const listaMembri = createNewCard(membri);
@@ -49,16 +66,20 @@ for (i = 0; i < membri.length; i++) {
 function createNewCard (membri) {
    const card = document.createElement('div');
    card.classList.add('card');
+
    const cardBorder = document.createElement('div');
    cardBorder.classList.add('card-border-top');
    card.append(cardBorder);
+
    const cardImg = document.createElement('img');
    cardImg.classList.add('img');
    cardImg.src = (membri[i]['immagineProfilo']);
    card.append(cardImg);
+
    const cardPerson = document.createElement('span');
    cardPerson.innerHTML = (membri[i]['nome'])
    card.append(cardPerson);
+
    const cardTitle = document.createElement('p');
    cardTitle.classList.add('job');
    cardTitle.innerHTML = membri[i]['ruolo'];
