@@ -45,7 +45,7 @@ button.addEventListener ('click',
 
         const nome = prompt('Nome del nuovo membro del team');
         const ruolo = prompt('Ruolo del nuovo membro del team');
-        const immagineProfilo = parseInt(prompt('Allega il percorso per la tua immagine di profilo, aggiungendo il prefisso img/'));
+        const immagineProfilo = prompt('Allega il percorso per la tua immagine di profilo, aggiungendo il prefisso img/');
 
         const nuovoMembro = {
             'nome': nome,
