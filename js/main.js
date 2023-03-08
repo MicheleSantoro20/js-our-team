@@ -28,7 +28,7 @@ const  membri = [
         'nome':'Barbara Ramos',
         'ruolo': 'Graphic Designer',
         'immagineProfilo': 'img/barbara-ramos-graphic-designer.jpg'
-    }
+    },
 ];
 
 for (let key in membri) {
@@ -49,10 +49,15 @@ button.addEventListener ('click',
 
         const nuovoMembro = {
             'nome': nome,
-            'ruolo': cognome,
+            'ruolo': ruolo,
             'immagineProfilo': immagineProfilo
         };
         membri.push(nuovoMembro);
+
+        const last = membri[membri.length-1];
+        console.log(last);
+        const newMember = createNewCard(last);
+        main.append(nuovoMembro);
     })
 
 
