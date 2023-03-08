@@ -43,8 +43,16 @@ button.addEventListener ('click',
     
     function() {
 
-        
+        const nome = prompt('Nome del nuovo membro del team');
+        const ruolo = prompt('Ruolo del nuovo membro del team');
+        const immagineProfilo = parseInt(prompt('Allega il percorso per la tua immagine di profilo, aggiungendo il prefisso img/'));
 
+        const nuovoMembro = {
+            'nome': nome,
+            'ruolo': cognome,
+            'immagineProfilo': immagineProfilo
+        };
+        membri.push(nuovoMembro);
     })
 
 
